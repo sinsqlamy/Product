@@ -1,14 +1,9 @@
-@import "../scss/adaptive_mixin.scss";
-
-$light-black: #22343D;
-$milk: #E5E5E5;
-$green: #02897A;
-$text-night-blue: #173A56;
-$border: #BCD0E5;
-$background: #E5E5E5;
+@import "../scss/components/adaptive_mixin.scss";
+@import "../scss/components/var.scss";
+@import "../scss/components/reset.scss";
 
 
-@mixin default-btn{
+@mixin default-btn {
     .default-btn {
         color: $text-night-blue;
         padding: 10px 15px;
@@ -20,7 +15,7 @@ $background: #E5E5E5;
     }
 }
 
-@mixin filled-btn{
+@mixin filled-btn {
     .filled-btn {
         font-weight: 700;
         border: none;
@@ -53,8 +48,8 @@ header {
         flex-wrap: wrap;
         justify-content: space-between;
         row-gap: 30px;
-    
-        .logo{
+
+        .logo {
             display: flex;
             flex-wrap: wrap;
             row-gap: 30px;
@@ -65,7 +60,7 @@ header {
                 color: $text-night-blue;
             }
         }
-        
+
         .main-menu {
             display: flex;
             flex-wrap: wrap;
@@ -89,156 +84,24 @@ header {
 }
 
 // promo
-
 .promo {
     background-color: $background;
-    padding: 50px 8px;
 
-    .promo-info {
+    .promo-wrapper {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        color: $text-night-blue;
+        flex-wrap: nowrap;
 
         .text-promo {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            text-align: left;
-            width: 600px;
-            
 
             h1 {
+                color: $light-black;
+                font-family: 'Poppins';
+                font-style: normal;
                 font-weight: 700;
                 font-size: 40px;
-                margin-bottom: 18px;
             }
-
-            p {
-                font-weight: 400;
-                font-size: 16px;
-                margin-bottom: 60px;
-            }
-
-            .default {
-                text-decoration: underline;
-                margin-left: 10px;
-                color: $green;
-                font-weight: bold;
-
-                i {
-                    margin-right: 5px;
-                }
-            }
-
-            @include filled-btn();
-
         }
-
-        img {
-            max-width: 500px;
-            
-        }
-
     }
-
 }
 
 // products
-
-.products {
-    background-color: $background;
-    padding-bottom: 50px;
-
-    .products-info {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        text-align: center;
-        position: relative;
-
-        
-    
-        h1 {
-            color: $text-night-blue;
-            font-weight: 700;
-            font-size: 32px;
-            margin-bottom: 66px;
-        }
-    
-        .items {
-            display: flex;
-            margin-bottom: 50px;
-            text-align: start;
-            
-            .item {
-                display: flex;
-                flex-direction: column;
-                gap: 46px;
-                color: $text-night-blue;
-
-                span {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    i {
-                        border-radius: 15px; 
-                        padding: 15px;
-                        color: #fff;
-                    }
-                }
-
-                &:nth-child(1) {
-                    span {
-                        i {
-                            background-color: #02897A;
-                        }
-                    }
-                }
-
-                &:nth-child(2) {
-                    span {
-                        i {
-                            background-color: #4D8DFF;
-                        }
-                    }
-                }
-
-                &:nth-child(3) {
-                    span {
-                        i {
-                            background-color: #740A76;
-                        }
-                    }
-                }
-
-                &:nth-child(4) {
-                    span {
-                        i {
-                            background-color: #F03E3D;
-                        }
-                    }
-                }
-
-                h3 {
-                    font-weight: 600;
-                    font-size: 22px
-                }
-
-                p {
-                    font-weight: 400;
-                    font-size: 16px
-                }
-
-            }
-        }
-    
-        @include filled-btn();
-    }
-
-}
-

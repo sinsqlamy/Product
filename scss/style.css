@@ -3,6 +3,106 @@
 /* Small Device, Tablets */
 /*Extra Small Devices, Phones*/
 /* Custom, iPhone Retina */
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  /*outline: none;*/
+}
+
+a:focus,
+a:active {
+  /* outline: none;*/
+}
+
+/* Links */
+a, a:link, a:visited {
+  /* color: inherit; */
+  text-decoration: none;
+  /* display: inline-block; */
+}
+
+a:hover {
+  /* color: inherit; */
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-family: "Montserrat", sans-serif;
@@ -66,120 +166,17 @@ header .nav .main-menu .filled-btn {
 
 .promo {
   background-color: #E5E5E5;
-  padding: 50px 8px;
 }
-.promo .promo-info {
+.promo .promo-wrapper {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  color: #173A56;
+  flex-wrap: nowrap;
 }
-.promo .promo-info .text-promo {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  width: 600px;
-}
-.promo .promo-info .text-promo h1 {
+.promo .promo-wrapper .text-promo h1 {
+  color: #22343D;
+  font-family: "Poppins";
+  font-style: normal;
   font-weight: 700;
   font-size: 40px;
-  margin-bottom: 18px;
-}
-.promo .promo-info .text-promo p {
-  font-weight: 400;
-  font-size: 16px;
-  margin-bottom: 60px;
-}
-.promo .promo-info .text-promo .default {
-  text-decoration: underline;
-  margin-left: 10px;
-  color: #02897A;
-  font-weight: bold;
-}
-.promo .promo-info .text-promo .default i {
-  margin-right: 5px;
-}
-.promo .promo-info .text-promo .filled-btn {
-  font-weight: 700;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 15px;
-  background-color: #02897A;
-  color: #fff;
-}
-.promo .promo-info img {
-  max-width: 500px;
-}
-
-.products {
-  background-color: #E5E5E5;
-  padding-bottom: 50px;
-}
-.products .products-info {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-.products .products-info h1 {
-  color: #173A56;
-  font-weight: 700;
-  font-size: 32px;
-  margin-bottom: 66px;
-}
-.products .products-info .items {
-  display: flex;
-  margin-bottom: 50px;
-  text-align: start;
-}
-.products .products-info .items .item {
-  display: flex;
-  flex-direction: column;
-  gap: 46px;
-  color: #173A56;
-}
-.products .products-info .items .item span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.products .products-info .items .item span i {
-  border-radius: 15px;
-  padding: 15px;
-  color: #fff;
-}
-.products .products-info .items .item:nth-child(1) span i {
-  background-color: #02897A;
-}
-.products .products-info .items .item:nth-child(2) span i {
-  background-color: #4D8DFF;
-}
-.products .products-info .items .item:nth-child(3) span i {
-  background-color: #740A76;
-}
-.products .products-info .items .item:nth-child(4) span i {
-  background-color: #F03E3D;
-}
-.products .products-info .items .item h3 {
-  font-weight: 600;
-  font-size: 22px;
-}
-.products .products-info .items .item p {
-  font-weight: 400;
-  font-size: 16px;
-}
-.products .products-info .filled-btn {
-  font-weight: 700;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 15px;
-  background-color: #02897A;
-  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
