@@ -1,30 +1,9 @@
 @import "../scss/components/adaptive_mixin.scss";
 @import "../scss/components/var.scss";
 @import "../scss/components/reset.scss";
+@import "../scss/components/mixins.scss";
 
 
-@mixin default-btn {
-    .default-btn {
-        color: $text-night-blue;
-        padding: 10px 15px;
-        border: 1px solid $border;
-        border-radius: 4px;
-        font-weight: 600;
-        font-size: 16px;
-        display: inline-block;
-    }
-}
-
-@mixin filled-btn {
-    .filled-btn {
-        font-weight: 700;
-        border: none;
-        border-radius: 4px;
-        padding: 10px 15px;
-        background-color: $green;
-        color: #fff;
-    }
-}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -86,12 +65,18 @@ header {
 // promo
 .promo {
     background-color: $background;
+    padding: 50px 8px;
 
     .promo-wrapper {
         display: flex;
         flex-wrap: nowrap;
 
         .text-promo {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
 
             h1 {
                 color: $light-black;
@@ -100,8 +85,136 @@ header {
                 font-weight: 700;
                 font-size: 40px;
             }
+
+            p {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                color: #22343D;
+            }
+
+            .promo-btns {
+                @include filled-btn();
+                display: flex;
+                column-gap: 30px;
+
+                .play {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 5px;
+
+                    .default {
+                        color: $green;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     }
 }
 
 // products
+.products {
+    position: relative;
+
+    h2 {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+        color: $light-black;
+        margin-bottom: 50px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 500px;
+        border-bottom-left-radius: 45%;
+        border-bottom-right-radius: 45%;
+        background-color: $background;
+        z-index: -1;
+    }
+
+    .items {
+        display: flex;
+        justify-content: space-around;
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            span {
+                display: flex;
+                width: 50px;
+                height: 50px;
+                
+                justify-content: center;
+                align-items: center;
+                border-radius: 15px;
+
+                
+            }
+            &:nth-child(1) {
+                span {
+                    background-color: $green;
+                }
+            }
+
+            &:nth-child(2) {
+                span {
+                    background-color: $blue;
+                }
+            }
+
+            &:nth-child(3) {
+                span {
+                    background-color: $purple;
+                }
+            }
+
+            &:nth-child(4) {
+                span {
+                    background-color: $orange;
+                }
+            }
+
+            h3 {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 33px;
+                color: $light-black;
+            }
+
+            p {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: $light-black;
+            }
+        }
+    }
+
+    .product-btn {
+
+        @include filled-btn;
+        text-align: center;
+        margin-top: 70px;
+    }
+}

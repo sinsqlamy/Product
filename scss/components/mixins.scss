@@ -1,0 +1,30 @@
+@mixin default-btn {
+    .default-btn {
+        color: $text-night-blue;
+        padding: 10px 25px;
+        border: 1px solid $border;
+        border-radius: 4px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        display: inline-block;
+    }
+}
+
+@mixin filled-btn {
+    .filled-btn {
+        border: none;
+        border-radius: 4px;
+        padding: 10px 25px;
+        background-color: $green;
+        color: #fff;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        display: inline-block;
+    }
+}
